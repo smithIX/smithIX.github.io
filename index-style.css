@@ -3,10 +3,10 @@
     --content-spacing:5px;
     --text-color:#1e181a;
     --border:6px double black;
-    --backgroundtexture:url("./texturepaper.png");
+    --backgroundtexture:url("./assets/texturepaper.png");
     --foreground-color:#FFEBA5;
-    --spread-background:url("./backgroundseamless.png");
-    --title-background:url("./titlebackground.png");
+    --spread-background:url("./assets/backgroundseamless.png");
+    --title-background:url("./assets/titlebackground.png");
     --card-border:4px solid #1e181a;
 }
 
@@ -34,7 +34,7 @@ body{
     padding-bottom:16px;
     margin-bottom:8px;
     font-size:75px;
-    background-image:url("./bannerbackground.png");
+    background-image:url("./assets/bannerbackground.png");
     background-size:cover;
 }
 main{
