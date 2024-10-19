@@ -2,12 +2,14 @@
 :root{
     --content-spacing:5px;
     --text-color:#1e181a;
-    --border:6px double black;
     --backgroundtexture:url("./assets/texturepaper.png");
     --foreground-color:#FFEBA5;
     --spread-background:url("./assets/backgroundseamless.png");
     --title-background:url("./assets/titlebackground.png");
     --card-border:4px solid #1e181a;
+    --discomfort:discomfort 5s infinite linear;
+    --discomfortrev:discomfortrev 5s infinite linear;
+    --discomfortrevhover:discomfortrevhover 5s infinite linear;
 }
 
 body{
@@ -29,10 +31,12 @@ body{
 #banner{
     text-align:center;
     height:max-content;
+    color:#eee0d5;
+    text-shadow: 2px 2px 2px var(--text-color);
     width:100%;
     padding-top:16px;
     padding-bottom:16px;
-    margin-bottom:8px;
+    margin-bottom:20px;
     font-size:75px;
     background-image:url("./assets/bannerbackground.png");
     background-size:cover;
@@ -49,12 +53,11 @@ main{
     font-weight:bold;
     font-size:24px;
     padding:2px;
-    border:var(--card-border);
-    background-image:var(--title-background);
-    border-radius:5px;
+    margin-left:4px;
+    margin-right:4px;
 }
 
-.flex{
+.flex{ /*allows for easy insertion of more cards later on*/
     display:flex;
     justify-content:center;
 }
@@ -62,4 +65,43 @@ main{
 .card{
     margin-left:8px;
     margin-right:8px;
+    transition: all 300ms ease-in-out;
+    animation:var(--discomfortrev);
 }
+
+.card:hover{
+    transform:scale(1.1);
+    animation:var(--discomfortrevhover);
+}
+
+#welcometext{
+    animation:var(--discomfort);
+}
+
+@keyframes discomfort{
+    0% {
+        transform:rotate(0deg) translateX(1px) rotate(0deg);
+    }
+    100%{
+        transform:rotate(-360deg) translateX(1px) rotate(360deg);
+    }
+}
+
+@keyframes discomfortrev{
+    0% {
+        transform:rotate(0deg) translateX(1px) rotate(0deg);
+    }
+    100%{
+        transform:rotate(360deg) translateX(1px) rotate(-360deg);
+    }
+}
+
+@keyframes discomfortrevhover{
+    0% {
+        transform:rotate(0deg) translateX(2px) rotate(0deg) scale(1.1);
+    }
+    100%{
+        transform:rotate(360deg) translateX(2px) rotate(-360deg) scale(1.1);
+    }
+}
+/*these animations should make the viewer feel ill*/
