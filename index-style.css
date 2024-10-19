@@ -5,7 +5,9 @@
     --border:6px double black;
     --backgroundtexture:url("./texturepaper.png");
     --foreground-color:#FFEBA5;
-    --title-background:url("./titlebackground.png")
+    --spread-background:url("./backgroundseamless.png");
+    --title-background:url("./titlebackground.png");
+    --card-border:4px solid #1e181a;
 }
 
 body{
@@ -28,16 +30,16 @@ body{
     text-align:center;
     height:max-content;
     width:100%;
-    margin-bottom:8px;
     padding-top:16px;
-    font-size:60px;
-    border-bottom:8px double #1e181a;
-    background-color:var(--foreground-color);
+    padding-bottom:16px;
+    margin-bottom:8px;
+    font-size:75px;
+    background-image:url("./bannerbackground.png");
+    background-size:cover;
 }
 main{
     text-align:center;
     width:100%;
-    background-color:var(--foreground-color);
 }
 .spread{
     padding:20px;
@@ -47,6 +49,17 @@ main{
     font-weight:bold;
     font-size:24px;
     padding:2px;
-    border:4px double #1e181a;
+    border:var(--card-border);
     background-image:var(--title-background);
+    border-radius:5px;
+}
+
+.flex{
+    display:flex;
+    justify-content:center;
+}
+
+.card{
+    margin-left:8px;
+    margin-right:8px;
 }
