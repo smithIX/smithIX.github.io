@@ -1,12 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Prociono&display=swap');/*open source font*/
 :root{
-    --content-spacing:5px;
     --text-color:#1e181a;
-    --backgroundtexture:url("./assets/texturepaper.png");
+    --backgroundtexture:url("./texturepaper.png");
     --foreground-color:#FFEBA5;
-    --spread-background:url("./assets/backgroundseamless.png");
-    --title-background:url("./assets/titlebackground.png");
-    --card-border:4px solid #1e181a;
     --discomfort:discomfort 5s infinite linear;
     --discomfortrev:discomfortrev 5s infinite linear;
     --discomfortrevhover:discomfortrevhover 5s infinite linear;
@@ -38,7 +34,7 @@ body{
     padding-bottom:16px;
     margin-bottom:20px;
     font-size:75px;
-    background-image:url("./assets/bannerbackground.png");
+    background-image:url("./bannerbackground.png");
     background-size:cover;
 }
 main{
