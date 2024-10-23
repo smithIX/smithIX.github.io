@@ -6,22 +6,10 @@
     --bookpull:bookpull .5s 1 linear forwards;
 }
 
-body{
-    background-image:var(--backgroundtexture);
-    font-family: "Prociono", serif;
-    font-weight:400;
-    color:var(--text-color);
-    font-style:normal;
-    background-attachment:fixed;
-    background-size:100%;
-    background-repeat:no-repeat;
-    background-color:#f8d667;
-}
-
-#container{
+#bookshelves{
     display:flex;
     margin:auto;
-    margin-top:200px;
+    margin-top:16px;
     max-width:1400px;
 }
 

@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Prociono&display=swap');/*open source font*/
+:root{
+    --text-color:#1e181a;
+    --backgroundtexture:url("./texturepaper.png");
+    --foreground-color:#FFEBA5;
+}
+
+body{
+    background-image:var(--backgroundtexture);
+    font-family: "Prociono", serif;
+    font-weight:400;
+    color:var(--text-color);
+    font-style:normal;
+    background-attachment:fixed;
+    background-size:100%;
+    background-repeat:no-repeat;
+    background-color:#f8d667;
+}
+
+#container{
+    max-width:850px;
+    margin: 16px auto 16px auto;
+}
+
+#banner{
+    text-align:center;
+    height:max-content;
+    color:#eee0d5;
+    text-shadow: 2px 2px 2px var(--text-color);
+    width:100%;
+    padding-top:16px;
+    padding-bottom:16px;
+    margin-bottom:20px;
+    font-size:75px;
+    background-image:url("./bannerbackground.png");
+    background-size:cover;
+}
