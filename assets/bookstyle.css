@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Prociono&display=swap');/*open source font*/
+:root{
+    --text-color:#1e181a;
+    --backgroundtexture:url("./texturepaper.png");
+    --foreground-color:#FFEBA5;
+    --discomfort:discomfort 5s infinite linear;
+    --discomfortrev:discomfortrev 5s infinite linear;
+    --discomfortrevhover:discomfortrevhover 5s infinite linear;
+}
+
+body{
+    background-image:var(--backgroundtexture);
+    font-family: "Prociono", serif;
+    font-weight:400;
+    color:var(--text-color);
+    font-style:normal;
+    background-attachment:fixed;
+    background-size:100%;
+    background-repeat:no-repeat;
+    background-color:#f8d667;
+}
+
+#container{
+    display:flex;
+    margin:auto;
+    margin-top:200px;
+    max-width:1400px;
+}
+
+.bookshelf{
+    margin:auto;
+    width:360px;
+    height:560px;
+    background-image: url("./shelf.png");
+    background-size:400px 600px;
+    padding:20px;
+    /*flex rules*/
+    display:flex;
+    flex-wrap:wrap;
+    align-content:flex-start;
+    row-gap:20px;
+}
+
+.book{
+    width:20px;
+    height:121px;
+    margin:2px;
+    display:inline-block;
+    writing-mode:vertical-rl;
+    text-orientation:mixed;
+    color:white;
+    background-color:#bf353b;
+}
+
+.book:hover{
+    animation-name:bookpull;
+    animation-iteration-count:1;
+}
+
+@keyframes bookpull{
+    0% {
+        transform:height(100%);
+    }
+    100%{
+        transform:height(60%);
+    }
+}
