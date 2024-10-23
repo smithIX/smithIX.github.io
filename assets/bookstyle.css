@@ -7,10 +7,14 @@
 }
 
 #bookshelves{
-    display:flex;
     margin:auto;
     margin-top:16px;
     max-width:1400px;
+    /*flex rules*/
+    display:flex;
+    flex-wrap:wrap;
+    align-content:flex-start;
+    gap:80px;
 }
 
 .bookshelf{
