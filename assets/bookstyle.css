@@ -3,9 +3,7 @@
     --text-color:#1e181a;
     --backgroundtexture:url("./texturepaper.png");
     --foreground-color:#FFEBA5;
-    --discomfort:discomfort 5s infinite linear;
-    --discomfortrev:discomfortrev 5s infinite linear;
-    --discomfortrevhover:discomfortrevhover 5s infinite linear;
+    --bookpull:bookpull .5s 1 linear forwards;
 }
 
 body{
@@ -45,23 +43,26 @@ body{
     width:20px;
     height:121px;
     margin:2px;
-    display:inline-block;
-    writing-mode:vertical-rl;
-    text-orientation:mixed;
-    color:white;
-    background-color:#bf353b;
+    background-color:#FFEBA5;
 }
 
-.book:hover{
-    animation-name:bookpull;
-    animation-iteration-count:1;
+.spine{
+    width:20px;
+    height:121px;
+    background-color:#bf353b;
+    transition: all 10ms ease-out;
+}
+
+.spine:hover{
+    animation:var(--bookpull);
 }
 
 @keyframes bookpull{
-    0% {
-        transform:height(100%);
+    from {
+        transform:scaleY(1) translateY(0px);
     }
-    100%{
-        transform:height(60%);
+    to{
+        transform:scaleY(.95) translateY(10px);
     }
 }
+/*this would be wildly easier with javascript but I stubbornly refuse to use it*/
